@@ -9,6 +9,9 @@ AnotherScape Beta is a NeoForge modpack for Minecraft 1.21.1.
 3. Copy its `mods` folder into your Minecraft game folder.
 4. Start the NeoForge 1.21.1 profile.
 
+Every bundled dependency uses a readable mod-and-version JAR filename instead
+of a Modrinth project/version ID filename.
+
 ## Start a local server
 
 1. Install 64-bit Java 21.
@@ -17,4 +20,3 @@ AnotherScape Beta is a NeoForge modpack for Minecraft 1.21.1.
 
 The first launch downloads and installs the matching NeoForge server. No world,
 address, whitelist, or private server configuration is included in this pack.
-
