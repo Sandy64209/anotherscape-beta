@@ -2,6 +2,8 @@
 
 AnotherScape Beta is a NeoForge modpack for Minecraft 1.21.1.
 
+Current release: [AnotherScape Beta 1.0.78](https://github.com/Sandy64209/anotherscape-beta/releases/tag/beta)
+
 ## Install the client
 
 1. Install Minecraft 1.21.1 and NeoForge 21.1.234.
