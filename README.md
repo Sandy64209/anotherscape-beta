@@ -22,3 +22,9 @@ of a Modrinth project/version ID filename.
 
 The first launch downloads and installs the matching NeoForge server. No world,
 address, whitelist, or private server configuration is included in this pack.
+
+## Community
+
+Join the AnotherScape Discord: https://sandy64209.github.io/anotherscape-beta/discord/
+
+To change the Discord invite later, update site/discord/invite.json and commit the change. GitHub Pages automatically redeploys the redirect; the mod and pack links stay the same.

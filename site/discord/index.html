@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Joining the AnotherScape Discord</title>
+  <style>
+    body { background: #10151b; color: #eef3f7; font: 16px/1.5 system-ui, sans-serif; margin: 0; min-height: 100vh; display: grid; place-items: center; }
+    main { max-width: 34rem; padding: 2rem; text-align: center; }
+    a { color: #8dd5ff; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>AnotherScape Discord</h1>
+    <p id="status">Loading the current invite…</p>
+  </main>
+  <script>
+    (async () => {
+      const status = document.getElementById("status");
+      try {
+        const response = await fetch("./invite.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("invite config unavailable");
+        const config = await response.json();
+        const url = new URL(config.url);
+        if (url.protocol !== "https:" || !["discord.gg", "discord.com"].includes(url.hostname) ||
+            (url.hostname === "discord.com" && !url.pathname.startsWith("/invite/"))) {
+          throw new Error("invalid invite URL");
+        }
+        window.location.replace(url.href);
+      } catch {
+        status.textContent = "The invite could not be loaded. Check your internet connection and refresh this page.";
+      }
+    })();
+  </script>
+</body>
+</html>
